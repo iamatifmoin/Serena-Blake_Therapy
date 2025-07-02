@@ -1,6 +1,8 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { FAQSection } from "@/components/faq-section";
+import { ContactForm } from "@/components/contact-form";
 
 export default function Home() {
   return (
@@ -221,6 +223,12 @@ export default function Home() {
           </p> */}
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection />
+
+      {/* Contact Form */}
+      <ContactForm />
 
       {/* Final Quote Section - Much Bigger */}
       <section className="relative py-32 px-8">
