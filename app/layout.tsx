@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Serena Blake, PsyD - Psychological Services",
+  title: "Serena Blake, PsyD - Clinical Psychologist",
   description:
     "Psychological Care for Change, Insight, and Well-Being. Individual psychotherapy for adolescents and adults.",
 };

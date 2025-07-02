@@ -15,7 +15,7 @@ export default function Home() {
               Serena Blake, PsyD
             </h1>
             <p className="text-sm text-[#6b6b6b] freight-sans mt-0.5">
-              Psychological Services
+              Clinical Psychologist
             </p>
           </div>
         </div>
@@ -34,17 +34,15 @@ export default function Home() {
         </div>
         <div className="relative z-10 text-white max-w-5xl px-8">
           <h2 className="text-[56px] leading-[1.1] font-normal mb-8 freight-display">
-            Psychological Care for
+            Therapy for
             <br />
-            Change, Insight, and Well-Being
+            Growth, Healing, and Clarity
           </h2>
           <p className="text-[18px] mb-10 opacity-95 max-w-3xl mx-auto leading-relaxed freight-sans">
-            Offering individual psychotherapy for adolescents and adults in
-            Michigan and{" "}
+            Compassionate care for teens and adults in Michigan and
             <span className="underline decoration-1 underline-offset-2">
-              over U.S. states
-            </span>{" "}
-            through PSYPACT participation
+              across PSYPACT states
+            </span>
           </p>
           <Button className="bg-[#5a8a8a] hover:bg-[#4a7a7a] text-white px-8 py-3 rounded-full text-[14px] font-medium freight-sans tracking-wide">
             SCHEDULE A CONSULTATION
@@ -88,7 +86,7 @@ export default function Home() {
       </section>
 
       {/* Quote Section */}
-      <section className="py-20 px-8 bg-[#ebe7e1]">
+      <section className="py-20 px-8 bg-[#94B0B0]">
         <div className="max-w-5xl mx-auto text-center">
           <blockquote className="text-[32px] font-normal italic text-[#3a3a3a] leading-[1.3] freight-display mb-10">
             "Therapy can be a space where you invest in yourself—
@@ -186,7 +184,7 @@ export default function Home() {
       </section>
 
       {/* Information */}
-      <section className="py-18 px-8 bg-[#f4f1ed]">
+      <section className="py-24 px-8 bg-[#94B0B0]">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-[36px] font-normal mb-10 text-[#3a3a3a] freight-display">
             Information and Details
@@ -212,15 +210,6 @@ export default function Home() {
               practice, 500+ sessions
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* Unable to accept new clients */}
-      <section className="py-12 px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* <p className="text-[#4a4a4a] text-[18px] freight-sans">
-            Unable to accept new clients at this time.
-          </p> */}
         </div>
       </section>
 
@@ -273,7 +262,7 @@ export default function Home() {
           </div>
           <div className="mt-10 pt-8 border-t border-[#d0ccc6]">
             <p className="text-[13px] text-[#7a7a7a] freight-sans">
-              © 2025 Serena Blake PsyD Psychological Services, LLC. All rights
+              © 2025 Serena Blake PsyD Clinical Psychologist, LLC. All rights
               reserved.
             </p>
           </div>

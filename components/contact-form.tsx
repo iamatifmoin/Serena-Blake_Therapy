@@ -80,17 +80,19 @@ export function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
 
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      alert("Thank you for your message! Dr. Blake will be in touch with you soon.");
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      alert(
+        "Thank you for your message! Dr. Blake will be in touch with you soon."
+      );
       setFormData({
         name: "",
         email: "",
@@ -108,9 +110,9 @@ export function ContactForm() {
   };
 
   const handleInputChange = (field: keyof FormData, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData((prev) => ({ ...prev, [field]: value }));
     if (errors[field]) {
-      setErrors(prev => ({ ...prev, [field]: undefined }));
+      setErrors((prev) => ({ ...prev, [field]: undefined }));
     }
   };
 
@@ -121,7 +123,7 @@ export function ContactForm() {
           <h3 className="text-[36px] font-normal text-center mb-6 text-[#3a3a3a] freight-display">
             Get In Touch
           </h3>
-          
+
           <p className="text-center text-[#4a4a4a] text-[16px] leading-[1.6] freight-sans mb-10">
             Simply fill out the brief fields below and Dr. Blake will be in
             touch with you soon, usually within one business day. This form is
@@ -188,7 +190,7 @@ export function ContactForm() {
                 Message
               </label>
               <Textarea
-                placeholder="How can I help you?"
+                placeholder="What brings you here?"
                 value={formData.message}
                 onChange={(e) => handleInputChange("message", e.target.value)}
                 className={`min-h-[120px] text-[16px] bg-white border-2 ${
@@ -208,16 +210,21 @@ export function ContactForm() {
                 type="text"
                 placeholder="e.g., Mornings, Afternoons, Evenings, Weekends"
                 value={formData.preferredTime}
-                onChange={(e) => handleInputChange("preferredTime", e.target.value)}
+                onChange={(e) =>
+                  handleInputChange("preferredTime", e.target.value)
+                }
                 className={`h-12 text-[16px] bg-white border-2 ${
                   errors.preferredTime ? "border-red-500" : "border-[#3a3a3a]"
                 } rounded-md freight-sans`}
               />
               <p className="text-[#5a5a5a] text-[14px] mt-1 freight-sans">
-                Let us know when you're typically available for a call or consultation
+                Let us know when you're typically available for a call or
+                consultation
               </p>
               {errors.preferredTime && (
-                <p className="text-red-500 text-sm mt-1">{errors.preferredTime}</p>
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.preferredTime}
+                </p>
               )}
             </div>
 
@@ -225,10 +232,19 @@ export function ContactForm() {
               <label className="block text-[#3a3a3a] text-[16px] font-medium mb-2 freight-sans">
                 Preferred Contact Method
               </label>
-              <Select value={formData.preferredMethod} onValueChange={(value) => handleInputChange("preferredMethod", value)}>
-                <SelectTrigger className={`h-12 text-[16px] bg-white border-2 ${
-                  errors.preferredMethod ? "border-red-500" : "border-[#3a3a3a]"
-                } rounded-md freight-sans`}>
+              <Select
+                value={formData.preferredMethod}
+                onValueChange={(value) =>
+                  handleInputChange("preferredMethod", value)
+                }
+              >
+                <SelectTrigger
+                  className={`h-12 text-[16px] bg-white border-2 ${
+                    errors.preferredMethod
+                      ? "border-red-500"
+                      : "border-[#3a3a3a]"
+                  } rounded-md freight-sans`}
+                >
                   <SelectValue placeholder="Select preferred method" />
                 </SelectTrigger>
                 <SelectContent>
@@ -238,7 +254,9 @@ export function ContactForm() {
                 </SelectContent>
               </Select>
               {errors.preferredMethod && (
-                <p className="text-red-500 text-sm mt-1">{errors.preferredMethod}</p>
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.preferredMethod}
+                </p>
               )}
             </div>
 
